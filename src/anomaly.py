@@ -3,10 +3,17 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 from sklearn.neighbors import LocalOutlierFactor
 
-def preproc(data):
-    df.iloc[0][0].split(";")
-    df = pd.read_csv(data, names=columnnames)
+def preproc(fp):
+    
+    res = []
+    with open(fp, 'r') as file:
+        for i in file.readlines():
+            res.append(i.strip("\n").split(";"))
+    df = pd.DataFrame(res)
+    df.columns = df.iloc[0]
+    df = df.iloc[1:]
     return df
+    
 
 def isolationForest_anomaly(data):    
     # Train Isolation Forest Model
