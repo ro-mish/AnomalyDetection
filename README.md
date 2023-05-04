@@ -1,6 +1,6 @@
 # AnomalyDetection
 
-A short project detailing different methods of detecting anomalies for cloud services. 
+An exploratory project detailing different methods of detecting anomalies for cloud services. Implemented different classical ML methods and tested kernels.
 
 ### Loading Data
 
